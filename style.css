@@ -1,0 +1,43 @@
+/* CSS WASSIM */
+
+.pointage{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.btn{
+    margin: 10px;
+   
+}
+
+
+.jourSemaine{
+    border-right: 1px solid black;
+}
+
+table{
+    border: 1px solid black;
+margin-top: 5%;
+max-width: 60%;
+
+}
+
+.envoyer{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS WASSIM */
