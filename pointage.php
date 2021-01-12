@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['email'] = 'bernardMinet@gmail.com';
+$_SESSION['email'] = 'richard@bidule.com';
 include('includes/secret.php');
     try {
         $bdd = new PDO("mysql:host=localhost;dbname=mybocuse;charset=utf8", $user, $pass, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
@@ -22,7 +22,7 @@ include('includes/secret.php');
         $req = $bdd->prepare("SELECT check_in, check_out, day FROM attendance WHERE email_user = ? AND day = ? ORDER BY check_in DESC LIMIT 1");
         $req->execute([
             filter_var($_SESSION['email'], FILTER_SANITIZE_EMAIL),
-            date('Y-m-d')
+            date('2021-01-11')
             ]);
         $data = $req->fetch();
         
@@ -33,7 +33,7 @@ include('includes/secret.php');
                 $req->execute([
                     $idUser,
                     filter_var($_SESSION['email'], FILTER_SANITIZE_EMAIL),
-                    date('Y-m-d')
+                    date('2021-01-11')
                 ]);
                 $req->closeCursor();
                 echo 'Bienvenue';
@@ -49,7 +49,7 @@ include('includes/secret.php');
                         $req = $bdd->prepare("UPDATE attendance SET check_out = NOW() WHERE email_user = ? AND day = ?");
                         $req->execute([
                             filter_var($_SESSION['email'], FILTER_SANITIZE_EMAIL),
-                            date('Y-m-d')
+                            date('2021-01-11')
                         ]);
                         $req->closeCursor();
                         echo 'Aurevoir';
@@ -72,7 +72,7 @@ include('includes/secret.php');
                     $req->execute([
                         $idUser,
                         filter_var($_SESSION['email'], FILTER_SANITIZE_EMAIL),
-                        date('Y-m-d')
+                        date('2021-01-11')
                     ]);
                     $req->closeCursor();
                     echo 'Bienvenue';
