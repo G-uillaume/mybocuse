@@ -16,9 +16,9 @@
     check = false
     checkin.addEventListener('click', () => {
         if (!check) {
-        let formData = new FormData()
-        formData.append("enter", "enter")
-        fetch('pointage.php', {
+        let formData = new FormData() // ON SIMULE UN INPUT
+        formData.append("enter", "enter") // ON REMPLIT LE "FAUX" FORMULAIRE AVEC UNE VALEUR QUELCONQUE POUR POUVOIR LE RECUPERER EN PHP
+        fetch('pointage.php', { // ON CHARGE pointage.php COMME SI ON ENVOYAIT UN FORMULAIRE AVEC LA METHODE POST
             method: 'POST',
             body: formData
         })

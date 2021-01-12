@@ -26,15 +26,14 @@
         }
     }
     else {
-?>
-
-<form method="post" action="">
-    <p><label for="firstName">First name : </label><input type="text" id="firstName" name="firstName"></p>
-    <p><label for="lastName">Last name : </label><input id="lastName" name="lastName" type="text"></p>
-    <p><label for="email">Email : </label><input id="email" name="email" type="mail"></p>
-    <p><label for="password">Password : </label><input id="password" name="password" type="password"></p>
-    <input type="submit">
-</form>
-<?php
+        ?>
+        <form method="post" action="">
+            <p><label for="firstName">First name : </label><input type="text" id="firstName" name="firstName"></p>
+            <p><label for="lastName">Last name : </label><input id="lastName" name="lastName" type="text"></p>
+            <p><label for="email">Email : </label><input id="email" name="email" type="mail"></p>
+            <p><label for="password">Password : </label><input id="password" name="password" type="password"></p>
+            <input type="submit">
+        </form>
+        <?php
     }
-    ?>
+?>
