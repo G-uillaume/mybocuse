@@ -4,7 +4,13 @@
 
 <section>
     <div class=container>
-
+        <?php
+            // $req = $bdd->prepare("SELECT first_name, last_name, email FROM people WHERE ID = ?");
+            // $req->execute([
+            //     $_SESSION['id']
+            // ]);
+            // $data = $req->fetch();
+        ?>
         <div>
             <div class="row">
                 <div class="col-sm">
@@ -13,7 +19,7 @@
                             src="https://avatars3.githubusercontent.com/u/45150822?u=fc54c2bf6aa021c3d61212f54c229dc1596d58cf&v=4"
                             alt="pp">
                         &nbsp;
-                        Paul Sernine
+                        <?php echo $_SESSION['first_name'] . " " . $_SESSION['last_name'] ?>
                     </h3>
                 </div>
             </div>
@@ -25,13 +31,13 @@
                     <dl class="row">
 
                         <dt class="col-sm-3">Firstname</dt>
-                        <dd class="col-sm-9">Paul</dd>
+                        <dd class="col-sm-9"><?php echo $_SESSION['first_name']; ?></dd>
 
                         <dt class="col-sm-3">Lastname</dt>
-                        <dd class="col-sm-9">Sernine</dd>
+                        <dd class="col-sm-9"><?php echo $_SESSION['last_name']; ?></dd>
 
                         <dt class="col-sm-3">E-mail</dt>
-                        <dd class="col-sm-9">paulsernine@gmail.com</dd>
+                        <dd class="col-sm-9"><?php echo $_SESSION['email']; ?></dd>
 
                     </dl>
                 </div>

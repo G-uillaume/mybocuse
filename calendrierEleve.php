@@ -1,6 +1,12 @@
 <?php
-
 session_start();
+include('includes/secret.php');
+    try {
+        $bdd = new PDO("mysql:host=localhost;dbname=mybocuse;charset=utf8", $user, $pass, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+
+    } catch (Exception $e) {
+        die("Erreur : " . $e->getMessage());
+    }
 
 ?>
 
@@ -81,19 +87,13 @@ session_start();
 
     <!------------------------------- Button Ajouté ------------------------------------------>
 
-    <div class="ajouter">
-        <button onmousedown="document.getElementById('id01').style.display='block'" type="button"
-            class="btn btn-dark">Ajouté <i class="fas fa-plus-circle"></i></button>
+    
+    <div id='recipe' style="display:none;">
+        <?php include('includes/recipe_form.php'); ?>
     </div>
-
-    <div id="id01" class="modal">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;
-        </span>
-        <form class="modal-content" action="">
-            <div class="container">
-                <?php include("./includes/recipe_form.php")?>
-            </div>
-        </form>
+    <div class="ajouter">
+        <button type="button" id="add" class="btn btn-dark">Ajouter <i class="fas fa-plus-circle"></i>
+        </button>
     </div>
 
     <script>
@@ -106,6 +106,13 @@ session_start();
             modal.style.display = "none";
         }
     }
+
+    const add = document.querySelector('#add')
+    const recipe = document.querySelector('#recipe')
+    add.addEventListener('click', () => {
+        // recipe.classList.toggle("checked");
+        recipe.style.display = 'block'
+    })
     </script>
 
 

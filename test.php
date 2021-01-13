@@ -37,13 +37,7 @@
 
         <span class="col-7" style="margin-top: 38vh;">
             <?php 
-            if (!isset($_POST["btnSignup"])) {
-                include("includes/login.php");
-            }
-            else {
-                include("includes/signup_form.php");
-
-            }
+        include("includes/signup_form.php");
     ?>
         </span>
 
