@@ -34,7 +34,6 @@
             filter_var($_SESSION['mail'], FILTER_SANITIZE_EMAIL)
         ]);
         while ($data = $req->fetch()) {
-            print_r($data);
             if (!isset($data['check_in']) && !isset($data['check_out'])) {
                 echo "Vous n'avez encore jamais pointé !";
             } else {
