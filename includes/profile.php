@@ -4,37 +4,50 @@
 
 <section>
     <div class=container>
-        <div class="row">
-            <div class="col-sm">
-                <h2>
-                    <i class="fas fa-user-graduate fa-2x"></i>
-                    &nbsp;
-                    Paul Sernine
-                </h2>
+        <?php
+            // $req = $bdd->prepare("SELECT first_name, last_name, email FROM people WHERE ID = ?");
+            // $req->execute([
+            //     $_SESSION['id']
+            // ]);
+            // $data = $req->fetch();
+        ?>
+        <div>
+            <div class="row">
+                <div class="col-sm">
+                    <h3>
+                        <img height="100px"
+                            src="https://avatars3.githubusercontent.com/u/45150822?u=fc54c2bf6aa021c3d61212f54c229dc1596d58cf&v=4"
+                            alt="pp">
+                        &nbsp;
+                        <?php echo $_SESSION['first_name'] . " " . $_SESSION['last_name'] ?>
+                    </h3>
+                </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-sm-4">
-                <img height="80px"
-                    src="https://avatars3.githubusercontent.com/u/45150822?u=fc54c2bf6aa021c3d61212f54c229dc1596d58cf&v=4"
-                    alt="pp">
-            </div>
-            <div class="col-sm-8">
-                <dl class="row">
+        <div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <dl class="row">
 
-                    <dt class="col-sm-3">Lastname</dt>
-                    <dd class="col-sm-9">Sernine</dd>
-                    <dt class="col-sm-3">Firstname</dt>
-                    <dd class="col-sm-9">Paul</dd>
-                    <dt class="col-sm-3">E-mail</dt>
-                    <dd class="col-sm-9">paulsernine@gmail.com</dd>
+                        <dt class="col-sm-3">Firstname</dt>
+                        <dd class="col-sm-9"><?php echo $_SESSION['first_name']; ?></dd>
 
-                </dl>
+                        <dt class="col-sm-3">Lastname</dt>
+                        <dd class="col-sm-9"><?php echo $_SESSION['last_name']; ?></dd>
+
+                        <dt class="col-sm-3">E-mail</dt>
+                        <dd class="col-sm-9"><?php echo $_SESSION['email']; ?></dd>
+
+                    </dl>
+                </div>
+                <button type="button" class="btn btn-dark" style="width: 250px;" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-dark" style="width: 250px;">Save changes</button>
+
             </div>
+
         </div>
     </div>
 
-    </div>
-    </div>
 </section>
+

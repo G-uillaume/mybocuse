@@ -1,3 +1,15 @@
+<?php
+session_start();
+include('includes/secret.php');
+    try {
+        $bdd = new PDO("mysql:host=localhost;dbname=mybocuse;charset=utf8", $user, $pass, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+
+    } catch (Exception $e) {
+        die("Erreur : " . $e->getMessage());
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +38,7 @@
                 <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"> Profile <i class="fas fa-address-book"></i></button>
 
 
-                <button type="submit" name="out" value="Deconnexion" class="btn  btn-dark"> Logout <i class="fas fa-sign-out-alt"></i></button>
+                <button type="submit" name="out" value="Deconnexion" class="btn  btn-dark"><a href="./logOut.php">Logout </a> <i class="fas fa-sign-out-alt"></i></button>
 
             </form>
         </div>
@@ -35,41 +47,18 @@
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">My Profile</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <?php include('./includes/profile.php')?>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-dark">Save changes</button>
-                </div>
             </div>
         </div>
     </div>
-
-    <style>
-    .modal-dialog{
-        width: 18000px;
-    }
-    </style>
-
-
-
-
-    <?php
-             
-        // Something posted
-     if (isset($_POST['out'])) {
-        include("logOut.php");
-    }
-    ?>
-
-
 
 
     <!------------------------------- Pointage ------------------------------------------>
@@ -91,19 +80,13 @@
 
     <!------------------------------- Button Ajouté ------------------------------------------>
 
-    <div class="ajouter">
-        <button onmousedown="document.getElementById('id01').style.display='block'" type="button"
-            class="btn btn-dark">Ajouté <i class="fas fa-plus-circle"></i></button>
+    
+    <div id='recipe' style="display:none;">
+        <?php include('includes/recipe_form.php'); ?>
     </div>
-
-    <div id="id01" class="modal">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;
-        </span>
-        <form class="modal-content" action="">
-            <div class="container">
-                <?php include("./includes/recipe_form.php")?>
-            </div>
-        </form>
+    <div class="ajouter">
+        <button type="button" id="add" class="btn btn-dark">Ajouter <i class="fas fa-plus-circle"></i>
+        </button>
     </div>
 
     <script>
@@ -116,6 +99,13 @@
             modal.style.display = "none";
         }
     }
+
+    const add = document.querySelector('#add')
+    const recipe = document.querySelector('#recipe')
+    add.addEventListener('click', () => {
+        // recipe.classList.toggle("checked");
+        recipe.style.display = 'block'
+    })
     </script>
 
 

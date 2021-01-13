@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="submit" name="enter" id="enter">ENTREE</button>
+<button type="submit" name="out" id="out" disabled>CHECK-OUT</button>
+<div class="pointage"></div>
+
+<script>
+    const checkin = document.querySelector('#enter');
+    const checkout = document.querySelector('#out');
+    check = false
+    checkin.addEventListener('click', () => {
+        if (!check) {
+        let formData = new FormData() // ON SIMULE UN INPUT
+        formData.append("enter", "enter") // ON REMPLIT LE "FAUX" FORMULAIRE AVEC UNE VALEUR QUELCONQUE POUR POUVOIR LE RECUPERER EN PHP
+        fetch('pointage.php', { // ON CHARGE pointage.php COMME SI ON ENVOYAIT UN FORMULAIRE AVEC LA METHODE POST
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.text())
+            .then(text => {
+                document.querySelector('.pointage').textContent = text
+            })
+        checkin.disabled = true
+        checkout.disabled = false
+        check = true
+        } else {
+            checkin.disabled = false
+            checkout.disabled = true
+        }
+    })
+    checkout.addEventListener('click', () => {
+        if (check) {
+        let formData = new FormData()
+        formData.append("out", "out")
+        fetch('pointage.php', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.text())
+            .then(text => {
+                document.querySelector('.pointage').textContent = text
+            })
+            checkout.disabled = true
+            checkin.disabled = false
+            check = false
+        } else {
+            checkout.disabled = false
+            checkin.disabled = true
+        }
+    })
+</script>
+</body>
+</html>

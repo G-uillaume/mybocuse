@@ -1,34 +1,48 @@
+<?php
+    $request = $bdd -> query('SELECT recipes.title AS title, recipes.date AS date, recipes.description AS description, people.first_name AS first_name FROM recipes 
+    INNER JOIN people ON people.ID = recipes.fk_id_user ORDER BY recipes.date');
+
+    $arr = [];
+    
+    while ($data = $request -> fetch()){
+        array_push($arr, $data);
+    }
+?>
+
 <table class="table mx-auto">
     <thead>
-        <tr>
-            <th scope="col">Monday </th>
-            <th scope="col">Tuesday</th>
-            <th scope="col">Wednesday</th>
-            <th scope="col">Thursday</th>
-            <th scope="col">Friday</th>
-            <th scope="col">Saturday</th>
-            <th scope="col">Sunday</th>
+        <tr class="jourSemaine">
+                <th scope="col"></th>
+            <?php
+                for ($i = 0; $i < count($arr); $i++) {
+                    ?>
+                    <th scope="col"><?php echo $arr[$i]['date']; ?> </th>
+                    <?php
+                }
+            ?>
         </tr>
-    </thead class="jourSemaine">
+    </thead>
     <tbody>
         <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
+            <th scope="row">First name</th>
+            <?php
+                for ($i = 0; $i < count($arr); $i++) {
+                    ?>
+                    <td><?php echo $arr[$i]['first_name']; ?> </td>
+                    <?php
+                }
+            ?>
         </tr>
 
         <tr>
-            <th scope="row">2</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
+            <th scope="row">Title</th>
+            <?php
+                for ($i = 0; $i < count($arr); $i++) {
+                    ?>
+                    <td><?php echo $arr[$i]['title']; ?> </td>
+                    <?php
+                }
+            ?>
         </tr>
 
     </tbody>
