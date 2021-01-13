@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $_SESSION['mail'] = 'barbar@elephant.com';
+    $_SESSION['mail'] = 'flo@bxl.com';
     // ----------- CONNEXION A LA BASE DE DONNEES ---------- //
     include('includes/secret.php');
     try {
@@ -27,13 +27,14 @@
         // REQUETE POUR RECUPERER LES HEURES DE CHECKIN/OUT EN FONCTION DE L'EMAIL DE L'USER
         $req = $bdd->prepare("SELECT a.email_user AS email, a.check_in AS check_in, a.check_out AS check_out
         FROM attendance AS a
-        RIGHT JOIN people AS p
+        RIGHT JOIN people AS p -- ICI RIGHT JOIN FONCTIONNE, MAIS PAS INNER NI LEFT, JE SAIS PAS POURQUOI
             ON p.id = a.fk_id_user
             WHERE p.email = ?");
         $req->execute([
             filter_var($_SESSION['mail'], FILTER_SANITIZE_EMAIL)
         ]);
         while ($data = $req->fetch()) {
+            print_r($data);
             if (!isset($data['check_in']) && !isset($data['check_out'])) {
                 echo "Vous n'avez encore jamais pointé !";
             } else {
