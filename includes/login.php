@@ -12,8 +12,9 @@
             <input type="password" name="password" placeholder="php /*" class="form-control" id="exampleInputPassword1">
         </div>
 
-        <input type="submit" value="Log-in" name="btnLogin" class="btn btn-primary">
-        <input onmousedown="document.getElementById('id01').style.display='block'" type="submit" value="Sign-up" name="btnSignup" class="btn btn-primary">
+        <input type="submit" value="Log-in" name="btnLogin" class="inputIndex btn btn-dark">
+        <input onmousedown="document.getElementById('id01').style.display='block'" type="submit" value="Sign-up"
+            name="btnSignup" class="inputIndex btn btn-dark">
     </form>
 </section>
 
@@ -21,19 +22,21 @@
 <?php
 
 if (isset($_POST['btnLogin'])) {
-  header("location:calendrier.php");
-}
+  header("location:calendrierEleve.php");
 
+}
+ 
 ?>
 
 <!----------------------------------------- CREATION MODAL--------------------------------------------------------->
 <div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form class="modal-content" action="">
-    <div class="container">
-        <?php include("./includes/signup_form.php")?>
-    </div>
-  </form>
+    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+        title="Close Modal">&times;</span>
+    <form class="index-modal-content" action="">
+        <div class="container">
+            <?php include("./includes/signup_form.php")?>
+        </div>
+    </form>
 </div>
 
 <script>
@@ -42,8 +45,8 @@ var modal = document.getElementById('id01');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
 </script>

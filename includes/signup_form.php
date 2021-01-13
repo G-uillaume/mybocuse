@@ -1,4 +1,4 @@
-<section>
+<section class="signupForm">
     <form style="margin:30px 0px 0px 30px;" method="post">
 
         <div class="mb-3">
@@ -21,6 +21,6 @@
             <input type="password" name="newPassword" placeholder="********" class="form-control" id="exampleInputPassword1">
         </div>
 
-        <input type="submit" value="Sign-up" name="btnSignup" class="btn btn-primary">
+        <input type="submit" value="Sign-up" name="btnSignup" class="btn btn-dark">
     </form>
 </section>

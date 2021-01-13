@@ -4,26 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9be8d195b1.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
     <title>My.Beaucuz</title>
 </head>
 
 <body>
     <!------------------------------- Navigation ------------------------------------------>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+            <a class="navbar-brand d-flex" href="#">
+                <img src="assets/img/chef.png" alt="img" width="80" height="80"
                     class="d-inline-block align-top">
-                My.Beaucuz
+                    <h1>My.Beaucuz</h1>
             </a>
 
             <form method="post">
-                <input type="submit" value="Profile" class="btn btn-primary">
-                <!-- <p> <strong>/</strong> </p> -->
-                <input type="submit" name="out" value="Deconnexion" class="btn btn-primary">
+               
+                <button type="submit" name="profile" value="Profile" class="btn btn-dark"> Profile <i class="fas fa-address-book"></i></button>
+                <button type="submit" name="out" value="Deconnexion" class="btn btn-dark"> Logout <i class="fas fa-sign-out-alt"></i></button>
 
             </form>
         </div>
@@ -37,18 +39,16 @@
     }
     ?>
 
-    <!------------------------------- Pointage ------------------------------------------>
-    <section class="pointage">
+    <!------------------------------- Historique ------------------------------------------>
+    <section class="historique">
 
-        <button type="button" class="btn btn-dark">9:00</button>
-        <!-- <input type="submit" value="9:00" class="btn btn-dark"> -->
-        <button type="button" class="btn btn-dark">17:00</button>
+        <button type="button" class="btn btn-dark">Historique <i class="fas fa-align-center"></i></button>
 
     </section>
 
     <!------------------------------- Calendrier ------------------------------------------>
 
-    <table class="table mx-auto">
+    <table class="tableRecipe table mx-auto">
         <thead>
             <tr>
                 <th scope="col">Monday </th>
@@ -85,16 +85,17 @@
 
     </table>
 
-    <!------------------------------- Button envoyé ------------------------------------------>
+    <!------------------------------- Button Ajouté ------------------------------------------>
 
-    <div class="envoyer">
+    <div class="ajouter">
         <button onmousedown="document.getElementById('id01').style.display='block'" type="button"
-            class="btn btn-dark">Envoyé</button>
+            class="btn btn-dark">Ajouté <i class="fas fa-plus-circle"></i></button>
     </div>
 
     <div id="id01" class="modal">
         <span onclick="document.getElementById('id01').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
+            title="Close Modal">&times;
+        </span>
         <form class="modal-content" action="">
             <div class="container">
                 <?php include("./includes/recipe_form.php")?>
