@@ -35,10 +35,12 @@ include('includes/secret.php');
 
             <form method="post">
 
-                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"> Profile <i class="fas fa-address-book"></i></button>
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#profileModal">
+                    Profile <i class="fas fa-address-book"></i></button>
 
 
-                <button type="submit" name="out" value="Deconnexion" class="btn  btn-dark"><a href="./logOut.php">Logout </a> <i class="fas fa-sign-out-alt"></i></button>
+                <button type="submit" name="out" value="Deconnexion" class="btn  btn-dark"><a href="./logOut.php">Logout
+                    </a> <i class="fas fa-sign-out-alt"></i></button>
 
             </form>
         </div>
@@ -46,7 +48,7 @@ include('includes/secret.php');
 
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -87,37 +89,31 @@ include('includes/secret.php');
 
     <!------------------------------- Button Ajouté ------------------------------------------>
 
-    
-    <div id='recipe' style="display:none;">
-        <?php include('includes/recipe_form.php'); ?>
-    </div>
+
     <div class="ajouter">
-        <button type="button" id="add" class="btn btn-dark">Ajouter <i class="fas fa-plus-circle"></i>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#recipesModal">Ajouter <i class="fas fa-plus-circle"></i>
         </button>
     </div>
 
-    <script>
-    // Get the modal
-    var modal = document.getElementById('id01');
+    <!-- Modal -->
+    <div class="modal fade" id="recipesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add a recipe watch</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <?php include('./includes/recipe_form.php')?>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
 
-    const add = document.querySelector('#add')
-    const recipe = document.querySelector('#recipe')
-    add.addEventListener('click', () => {
-        // recipe.classList.toggle("checked");
-        recipe.style.display = 'block'
-    })
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
     </script>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 
 </html>

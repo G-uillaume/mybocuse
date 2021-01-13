@@ -88,36 +88,30 @@
     <!------------------------------- Button Ajouté ------------------------------------------>
 
     <div class="ajouter">
-        <button onmousedown="document.getElementById('id01').style.display='block'" type="button"
-            class="btn btn-dark">Ajouté <i class="fas fa-plus-circle"></i></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#recipesProfModal">Ajouter <i class="fas fa-plus-circle"></i></button>
     </div>
 
-    <div id="id01" class="modal">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close"
-            title="Close Modal">&times;
-        </span>
-        <form class="modal-content" action="">
-            <div class="container">
-                <?php include("./includes/recipe_form.php")?>
+        <!-- Modal -->
+        <div class="modal fade" id="recipesProfModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add a recipe watch</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <?php include('./includes/recipe_form.php')?>
+                </div>
             </div>
-        </form>
+        </div>
     </div>
 
-    <script>
-    // Get the modal
-    var modal = document.getElementById('id01');
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
     </script>
-
-
-
-
 </body>
 
 </html>

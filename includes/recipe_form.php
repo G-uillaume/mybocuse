@@ -1,6 +1,5 @@
 <?php
     if (!empty($_POST['title']) and !empty($_POST['date']) AND !empty($_POST['description'])){
-        echo "YOUPI";
 
            
         $request = $bdd ->prepare('SELECT date FROM recipes WHERE date = ?');
