@@ -4,20 +4,13 @@
 
 <section>
     <div class=container>
-        <?php
-            // $req = $bdd->prepare("SELECT first_name, last_name, email FROM people WHERE ID = ?");
-            // $req->execute([
-            //     $_SESSION['id']
-            // ]);
-            // $data = $req->fetch();
-        ?>
         <div>
             <div class="row">
                 <div class="col-sm">
                     <h3>
-                        <img height="100px"
-                            src="./includes/media/student.svg"
-                            alt="pp">
+                                
+                        <img height="100px" src="./includes/media/student.svg" alt="pp">
+                        
                         &nbsp;
                         <?php echo $_SESSION['first_name'] . " " . $_SESSION['last_name'] ?>
                     </h3>
