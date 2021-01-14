@@ -65,6 +65,8 @@ Another use of the website created from the back-end team was the clocking in an
 
 Additionally, the student can add view a table of all the recipes recorded by him or by any of the other students. There can only be one recipe added per day. This is done by sending the new recipe addition data to our database table in PHPMyAdmin, and then presenting this new data in a table on the webiste. 
 
+Here is a screenshot of the database and the structure of its tables : 	![Database screenshot](includes/media/bdd.png)
+
 ***Important!*** There is also the option to log into our webiste as a chef. Chefs do not have to checkin and checkout as students do, and additionally, they can see the checkin and checkout history of any student of their choice.
 
 ### What did we learn from this experience:
@@ -78,13 +80,6 @@ Also, we learned how to carry out a password hash, and why it is so important to
 It should be mentioned that this project also refreshed some concepts we have already learned in HTML, CSS and Javascript, by creating a beautiful and responsive website. 
 
 ## Problems encountered:
-
-We learned what a shitshow Github can be when we do what should be a 1 person project. Since we were multiple people working on the same file and the same task (such as creating and styling the menu page), it creates a lot of conflicts, some that we could only resolve using the command line. This is because we all started with the same common html, css and js files, and later some of us renamed the files, hoping to avoid any conficts. Oh the irony...
-
-We also did not manage to make a functional shopping basket. We tried using the bulma modal preset on the last day of the project, but unsuccessfully. 
-
-We are having soe troubles with making the search bar work. If you search for something on the search bar, it will return the food that matches your input text, but the layout of the page will change and the background image cuts abruptly before the end of the page, which we have not figured out how to fix.
------
 
 During the first couple of days, there havent been any major problems. The occassional long time spent trying to figure out how to request the correct data from MySQL and how/where to add it for clarity.
 
