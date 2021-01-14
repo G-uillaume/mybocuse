@@ -24,7 +24,7 @@
 <body>
 
 
-    <div class="d-flex mx-auto" style="height: 100vh;">
+    <div class="allIndex d-flex mx-auto">
 
         <nav id="navbarIndex" class="col-5 navbar navbar-light">
             <div class="container-fluid">

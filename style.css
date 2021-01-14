@@ -9,7 +9,7 @@ body{
 h1 {
     padding-top: 20px;
     padding-left: 20px;
-    font-size: 3pc;
+    font-size: 220%;
     font-family: 'Cinzel Decorative', cursive;
     
     
@@ -100,6 +100,9 @@ color: white;
 }
 
 /*--------------------------( index.php )---------------------------------*/
+.allIndex{
+    height: 100vh;
+}
 
 #navbarIndex{
     clip-path: polygon(50% 0%, 100% 0, 80% 50%, 100% 100%, 100% 100%, 53% 100%, 0 100%, 0% 43%, 0 0);
