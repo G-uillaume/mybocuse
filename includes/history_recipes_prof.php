@@ -17,38 +17,41 @@
         array_push($arr, $data);
     }
 ?>
-<table class='tableREcipe table'>
-    <thead>
-        <tr>
-            <th>Date</th>
-            <th>Name</th>
-            <th>Title</th>
-            <th>Recipe</th>
-        </tr>
-    </thead>
-    <tbody> 
-        
-    <?php
-                for ($i = 0; $i < count($arr); $i++) {
-                    
-                    
-                        ?>
-                        <tr scope="col">
-                            <?php 
-                            
-                            echo "<td>".date("l", strtotime($arr[$i]['date'])) . "<br>" . implode("-", array_reverse(explode("-", $arr[$i]['date'])))."</td>";
 
-                            echo "<td>".$arr[$i]['first_name']. " ".$arr[$i]['last_name']."</td>";
-
-                            echo "<td>".$arr[$i]['title']."</td>";
-
-                            echo "<td>".$arr[$i]['description']."</td>";
-                            
-                            ?> 
-                        </tr>
-                        <?php  
-                }
-            ?>
+<div class='tabRecipe' style="overflow-y:auto; max-height: 70vh;">
+    <table class='tableRecipe table'>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Recipe</th>
+            </tr>
+        </thead>
+        <tbody > 
             
-    </tbody>
-</table>
+        <?php
+                    for ($i = 0; $i < count($arr); $i++) {
+                        
+                        
+                            ?>
+                            <tr scope="col">
+                                <?php 
+                                
+                                echo "<td>".date("l", strtotime($arr[$i]['date'])) . "<br>" . implode("-", array_reverse(explode("-", $arr[$i]['date'])))."</td>";
+
+                                echo "<td>".$arr[$i]['first_name']. " ".$arr[$i]['last_name']."</td>";
+
+                                echo "<td>".$arr[$i]['title']."</td>";
+
+                                echo "<td>".$arr[$i]['description']."</td>";
+                                
+                                ?> 
+                            </tr>
+                            <?php  
+                    }
+                ?>
+                
+        </tbody>
+    </table>
+</div>
