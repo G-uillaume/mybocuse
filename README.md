@@ -10,7 +10,15 @@ ___________
 
 Wecome ***Kelian*** and/or ***Emily*** to my masterpiece! :bowtie:
 
-Please find the **My.Beaucuz project link** [here] ().
+Please find the **My.Beaucuz project link** [here] (https://guillaumevanleynseele.go.yj.fr/).
+
+
+***CHEF ACCOUNT LOGIN DETAILS:*** 
+
+- name: Kill Coach
+- email: kill@coach.be
+- password: becode
+
 
 
 ### Reason for this project:
