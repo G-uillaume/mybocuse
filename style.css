@@ -79,6 +79,11 @@ color: white;
 
 }
 
+table{
+border: 5px solid black;
+
+}
+
 .table {
     border: 1px solid black;
     margin-top: 2%;
@@ -92,7 +97,7 @@ color: white;
 }
 
 
-.ajouter {
+.ajouter, .dropdown {
     display: flex;
     justify-content: center;
     margin-top: 1%;
@@ -157,5 +162,14 @@ input{
 /* CSS AYOUBE */
 
 .tableRecipe{
+    width: 515px;
+}
+
+.tableauProf{
+
+}
+
+
+.tableauCheck{
     width: 515px;
 }
