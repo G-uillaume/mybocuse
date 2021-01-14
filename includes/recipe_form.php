@@ -44,7 +44,7 @@
         </div>
 
         <form method="post">
-                <input type="submit" name="valider" value="Valider" class="btn btn-primary">
+                <input type="submit" name="valider" value="Valider" class="btn btn-dark">
 
         </form>
     </form>

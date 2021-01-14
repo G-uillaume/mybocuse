@@ -77,7 +77,7 @@
         </div>
 
         <input type="submit" value="Log-in" name="btnLogin" class="inputIndex btn btn-dark">
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#signupModal">Sign-up</button>
+        <button type="button" class="inputIndex btn btn-dark" data-bs-toggle="modal" data-bs-target="#signupModal">Sign-up</button>
     </form>
 
     <!----------------------------------------- CREATION MODAL--------------------------------------------------------->

@@ -3,13 +3,15 @@
 /*--------------------------( Géneral )---------------------------------*/
 body{
     background-image: linear-gradient(90deg, rgb(255,255,255) 0%,transparent 66%),repeating-linear-gradient(45deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(90deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(135deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),linear-gradient(0deg, rgb(255,255,255),rgb(255,255,255));
-
+    
 }
 
 h1 {
-    padding-top: 10px;
-    padding-left: 30px;
+    padding-top: 20px;
+    padding-left: 20px;
     font-size: 3pc;
+    font-family: 'Cinzel Decorative', cursive;
+    
     
 }
 
@@ -19,8 +21,8 @@ h1 {
 }
 
 .btn {
-   
-    margin: 12px 20px 5px 20px;
+    
+    margin: 12px 20px 5px 15px;
 
 }
 
@@ -29,9 +31,19 @@ h1 {
 
 }
 
+.modal-centent{
+    padding-top:10%;
+}
+
 input{
     max-width: 48% ;
 }
+
+button a{
+    color: white ;
+    text-decoration: none ;
+}
+
 
 i {
     color: #e3d87e;
@@ -39,24 +51,38 @@ i {
 }
 
 h2{
-    padding-top: 30px;
+    padding-top: 40px;
+    font-family: 'Fraunces', serif;
+}
+
+h3, h5, dt, dd , th , td, .btn , input , p{
+    padding-top: 10px;
+    font-size: 22px;
+    font-family: 'Fraunces', serif;
 }
 /*--------------------------( calendrierEleve.php/calendrierProf.php )---------------------------------*/
 .pointage,
 .historique {
     display: flex;
     justify-content: center;
-    margin-top: 0.4%;
-    margin-bottom: 1%;
+    /* margin-top: 0.4%; */
+    margin-top: 1%;
     clip-path: polygon(0 0, 100% 0, 100% 51%, 100% 100%, 80% 60%, 20% 60%, 0 100%, 0 43%);
-    padding-bottom: 50px;
+    padding-bottom: 30px;
+    padding-top: 5px;
  
 }
 
+button a{
+text-decoration: none;
+color: white;
+
+}
 
 .table {
     border: 1px solid black;
     margin-top: 2%;
+    margin-bottom: 2%;
     max-width: 60%;
 
 }
@@ -82,13 +108,13 @@ h2{
 }
 
 .form{
-    margin-top: 38vh;   
+    margin-top: 36vh;   
+    font-size: larger;
 }
 
 input{
     max-width: 48% ;
 }
-
 
 .inputIndex{
     width: 20% ;
@@ -96,10 +122,7 @@ input{
 
 }
 
-
 /*--------------------------( signup_form.php )---------------------------------*/
-
-
 
 .signupForm{
     background-image: linear-gradient(90deg, rgb(255,255,255) 0%,transparent 66%),repeating-linear-gradient(45deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(90deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(135deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),linear-gradient(0deg, rgb(255,255,255),rgb(255,255,255));
@@ -109,7 +132,7 @@ input{
 
 .modal-content{
     background-image: linear-gradient(90deg, rgb(255,255,255) 0%,transparent 66%),repeating-linear-gradient(45deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(90deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(135deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),linear-gradient(0deg, rgb(255,255,255),rgb(255,255,255));
-   
+    margin-top: 43px;
 }
 
 .modal-header{
@@ -117,8 +140,14 @@ input{
 }
 
 #titre{
-    margin-top: 6vh;
+    margin-top: 8vh;
+
 }
+
+.logo{
+    margin-bottom: 50px;
+}
+
 
 /* CSS WASSIM */
 

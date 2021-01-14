@@ -13,6 +13,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -27,15 +29,15 @@
         <nav id="navbarIndex" class="col-5 navbar navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand d-flex" href="#">
-                    <img src="assets/img/chef.png" alt="img" width="80" height="80" class="d-inline-block align-top">
-                    <h1 id='titre'>My.Beaucuz</h1>
+                    <img src="assets/img/chef.png" alt="img" width="200" height="200" class="logo d-inline-block align-top">
+                    <h1 id='titre'>My. Beaucuz</h1>
                 </a>
             </div>
         </nav>
         
 
 
-        <span class="col-7" style="margin-top: 38vh;">
+        <span class="form col-7">
             <?php 
             if (!isset($_POST["btnSignup"])) {
                 include("includes/login.php");
