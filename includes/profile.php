@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-sm">
                     <h3>
-                        <img height="100px"
+                        <img class="imgProfile" height="100px"
                             src="./includes/media/student.svg"
                             alt="pp">
                         &nbsp;
