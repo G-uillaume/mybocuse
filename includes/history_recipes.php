@@ -1,6 +1,6 @@
 <?php
     $request = $bdd -> query('SELECT recipes.title AS title, recipes.date AS date, recipes.description AS description, people.first_name AS first_name FROM recipes 
-    INNER JOIN people ON people.ID = recipes.fk_id_user ORDER BY recipes.date DESC LIMIT 4');
+    INNER JOIN people ON people.ID = recipes.fk_id_user ORDER BY recipes.date DESC');
 
     $arr = [];
     
