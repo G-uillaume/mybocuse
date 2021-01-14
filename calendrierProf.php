@@ -19,15 +19,16 @@
     <nav class="navbar navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand d-flex" href="#">
-                <img src="assets/img/chef.png" alt="img" width="80" height="80"
-                    class="d-inline-block align-top">
-                    <h1>My. Beaucuz</h1>
+                <img src="assets/img/chef.png" alt="img" width="80" height="80" class="d-inline-block align-top">
+                <h1>My. Beaucuz</h1>
             </a>
 
             <form method="post">
-               
-                <button type="submit" name="profile" value="Profile" class="btn btn-dark"> Profile <i class="fas fa-address-book"></i></button>
-                <button type="submit" name="out" value="Deconnexion" class="btn  btn-dark"><a href="./logOut.php">Logout</a> <i class="fas fa-sign-out-alt"></i></button>
+
+                <button type="submit" name="profile" value="Profile" class="btn btn-dark"> Profile <i
+                        class="fas fa-address-book"></i></button>
+                <button type="submit" name="out" value="Deconnexion" class="btn  btn-dark"><a
+                        href="./logOut.php">Logout</a> <i class="fas fa-sign-out-alt"></i></button>
 
             </form>
         </div>
@@ -50,51 +51,81 @@
 
     <!------------------------------- Calendrier ------------------------------------------>
 
-    <table class="tableRecipe table mx-auto">
-        <thead>
-            <tr>
-                <th scope="col">Monday </th>
-                <th scope="col">Tuesday</th>
-                <th scope="col">Wednesday</th>
-                <th scope="col">Thursday</th>
-                <th scope="col">Friday</th>
-                <th scope="col">Saturday</th>
-                <th scope="col">Sunday</th>
-            </tr>
-        </thead class="jourSemaine">
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-            </tr>
 
-            <tr>
-                <th scope="row">2</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-            </tr>
+    <div class="container">
+        <div class="row mx-auto">
+            <div class="col-5" style="height:100vh; border: 1px solid black; border-radius: 5px;">
 
-        </tbody>
+                <table class="tableRecipe table">
+                    <thead>
 
-    </table>
+                        <tr>
+                            <th></th>
+                            <th>Nom</th>
+                            <th>Date</th>
+                            <th>Recette</th>                        
+                        </tr>
+
+                        <tr>
+                            <th scope="col">Monday </th>
+                            <td>Mark</td>
+                            <td>14/01/2021</td>
+                            <td>Gateau au Canard</td>
+
+                        </tr>
+                    </thead class="jourSemaine">
+                    <tbody>
+                        <tr>
+                            <th scope="col">Tuesday</th>
+                            <td>Nom</td>
+                            <td>Date</td>
+                            <td>Recette</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="col">Wednesday</th>
+                            <td>Nom</td>
+                            <td>Date</td>
+                            <td>Recette</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="col">Thursday</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="col">Friday</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+
+            <div class="col sm-1"></div>
+
+
+            <div class="col-5" style="background-color: yellow; height:100vh; border-radius: 5px;">salut</div>
+
+
+        </div>
+    </div>
 
     <!------------------------------- Button Ajouté ------------------------------------------>
 
     <div class="ajouter">
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#recipesProfModal">Ajouter <i class="fas fa-plus-circle"></i></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#recipesProfModal">Ajouter <i
+                class="fas fa-plus-circle"></i></button>
     </div>
 
-        <!-- Modal -->
-        <div class="modal fade" id="recipesProfModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal -->
+    <div class="modal fade" id="recipesProfModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
