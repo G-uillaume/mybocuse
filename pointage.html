@@ -37,7 +37,7 @@
     checkout.addEventListener('click', () => {
         if (check) {
         let formData = new FormData()
-        formData.append("out", "out")
+        formData.append("getOut", "getOut")
         fetch('pointage.php', {
             method: 'POST',
             body: formData
@@ -54,6 +54,8 @@
             checkin.disabled = true
         }
     })
+
+    console.log(new Date())
 </script>
 </body>
 </html>

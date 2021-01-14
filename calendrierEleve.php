@@ -69,12 +69,14 @@ include('includes/secret.php');
         </div>
 
 
-        <!------------------------------- Pointage ------------------------------------------>
-        <section class="pointage">
 
-            <button type="submit" class="btn btn-dark">9:00<i class="fas fa-sun"></i></button>
-            <!-- <input type="submit" value="9:00" class="btn btn-dark"> -->
-            <button type="submit" class="btn btn-dark">17:00<i class="fas fa-moon"></i></button>
+    <!------------------------------- Pointage ------------------------------------------>
+    <section class="pointage">
+            <button id="enter" class="btn btn-dark">9:00<i class="fas fa-sun"></i></button>
+            <button id="out" class="btn btn-dark" disabled>17:00<i class="fas fa-moon"></i></button>
+           
+        
+
 
         </section>
 
@@ -114,6 +116,7 @@ include('includes/secret.php');
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
     </script>
+    <script src="pointage.js"></script>
 </body>
 
 </html>
