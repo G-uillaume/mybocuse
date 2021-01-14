@@ -2,7 +2,7 @@
 
 /*--------------------------( Géneral )---------------------------------*/
 body{
-    background-image: linear-gradient(90deg, rgb(255,255,255) 0%,transparent 66%),repeating-linear-gradient(45deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(90deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(135deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),linear-gradient(0deg, rgb(255,255,255),rgb(255,255,255));
+    background-image: linear-gradient(90deg,#181A1B 0%,transparent 66%),repeating-linear-gradient(45deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(90deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(135deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),linear-gradient(0deg, #181A1B,#181A1B);
     
 }
 
@@ -55,6 +55,7 @@ i {
 }
 
 h2{
+    text-align: center;
     padding-top: 40px;
     font-family: 'Fraunces', serif;
 }
@@ -82,11 +83,11 @@ text-decoration: none;
 color: white;
 
 }
-
+/* 
 table{
 border: 5px solid black;
 
-}
+} */
 
 .table {
     border: 1px solid black;
@@ -96,10 +97,23 @@ border: 5px solid black;
 
 }
 
+.tableRecipe{
+    width: 515px;
+}
+
+
+.tableauCheck{
+    width: 515px;
+}
+
 .jourSemaine {
     border-right: 1px solid black;
 }
 
+.form-label {
+    margin-bottom: .5rem;
+    color:  #beb88a;
+}
 
 .ajouter, .dropdown {
     display: flex;
@@ -160,20 +174,9 @@ input{
     margin-bottom: 50px;
 }
 
-
 /* CSS WASSIM */
+
+
 
 /* CSS AYOUBE */
 
-.tableRecipe{
-    width: 515px;
-}
-
-.tableauProf{
-
-}
-
-
-.tableauCheck{
-    width: 515px;
-}

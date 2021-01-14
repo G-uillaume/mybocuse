@@ -76,10 +76,10 @@ include('includes/secret.php');
 
     <!------------------------------- Calendrier ------------------------------------------>
 
-    <h2 style='text-align: center;'>Historique des recettes</h2>
+    <h2>Historique des recettes</h2>
     <?php include('./includes/history_recipes.php') ?>
 
-    <h2 style='text-align: center;'>Historique des presences</h2>
+    <h2>Historique des presences</h2>
     <?php include('./includes/history.php') ?>
 
     <!------------------------------- Button Ajouté ------------------------------------------>
