@@ -90,7 +90,7 @@ include('includes/secret.php');
 
 
         <div class="ajouter">
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#recipesModal">Ajouter <i class="fas fa-plus-circle"></i>
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#recipesModal">Add Recipe <i class="fas fa-plus-circle"></i>
             </button>
         </div>
 
