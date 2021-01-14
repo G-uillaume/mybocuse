@@ -133,7 +133,7 @@
 
                     <div class="ajouter">
                         <button type="button" class="btn btn-dark" data-bs-toggle="modal"
-                            data-bs-target="#recipesProfModal">Ajouter <i class="fas fa-plus-circle"></i></button>
+                            data-bs-target="#recipesProfModal">Add recipe <i class="fas fa-plus-circle"></i></button>
                     </div>
 
                     <!-- Modal -->
