@@ -20,13 +20,13 @@ h1 {
    
 }
 
-.btn {
+.btn.btn-dark{
     
     margin: 12px 20px 5px 15px;
 
 }
 
-.btn:hover {
+.btn.btn-dark:hover{
     color: #f0ec57;
 
 }
@@ -39,11 +39,15 @@ input{
     max-width: 48% ;
 }
 
-button a{
+.btn a{
     color: white ;
     text-decoration: none ;
 }
 
+.btn a:hover{
+    color: #f0ec57 ;
+    text-decoration: none ;
+}
 
 i {
     color: #e3d87e;
