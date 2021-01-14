@@ -27,7 +27,7 @@
             <form method="post">
                
                 <button type="submit" name="profile" value="Profile" class="btn btn-dark"> Profile <i class="fas fa-address-book"></i></button>
-                <button type="submit" name="out" value="Deconnexion" class="btn btn-dark"> Logout <i class="fas fa-sign-out-alt"></i></button>
+                <button type="submit" name="out" value="Deconnexion" class="btn  btn-dark"><a href="./logOut.php">Logout</a> <i class="fas fa-sign-out-alt"></i></button>
 
             </form>
         </div>
