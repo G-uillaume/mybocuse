@@ -157,7 +157,7 @@
 
             <div class="col-5">
 
-                <table class="tableauCheck table">
+                <table class="tableCheck table">
                     <thead>
 
                         <tr>

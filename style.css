@@ -102,11 +102,11 @@ color: white;
 }
 
 .tableRecipe{
-    width: 515px;
+    width: 515px !important;
 }
 
-.tableauCheck{
-    width: 515px;
+.tableCheck{
+    width: 515px !important ;
 }
 
 .jourSemaine {
