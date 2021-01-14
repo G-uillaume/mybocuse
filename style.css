@@ -50,7 +50,7 @@ h2{
     margin-bottom: 1%;
     clip-path: polygon(0 0, 100% 0, 100% 51%, 100% 100%, 80% 60%, 20% 60%, 0 100%, 0 43%);
     padding-bottom: 50px;
-    background-color: #beb88a;
+ 
 }
 
 
@@ -77,14 +77,14 @@ h2{
 
 #navbarIndex{
     clip-path: polygon(50% 0%, 100% 0, 80% 50%, 100% 100%, 100% 100%, 53% 100%, 0 100%, 0% 43%, 0 0);
+    background-color: #beb88a;
 
 }
 
 .form{
     margin-top: 38vh;   
-
-
 }
+
 input{
     max-width: 48% ;
 }
@@ -100,11 +100,6 @@ input{
 /*--------------------------( signup_form.php )---------------------------------*/
 
 
-/* .container{
-    display: flex;
-    justify-content: center;
-    margin-left: 25%;
-} */
 
 .signupForm{
     background-image: linear-gradient(90deg, rgb(255,255,255) 0%,transparent 66%),repeating-linear-gradient(45deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(90deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(135deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),linear-gradient(0deg, rgb(255,255,255),rgb(255,255,255));
@@ -113,23 +108,17 @@ input{
 } 
 
 .modal-content{
-   
     background-image: linear-gradient(90deg, rgb(255,255,255) 0%,transparent 66%),repeating-linear-gradient(45deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(90deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(135deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),linear-gradient(0deg, rgb(255,255,255),rgb(255,255,255));
    
-  
 }
 
-
+.modal-header{
+    background-color: #beb88a;
+}
 
 #titre{
     margin-top: 6vh;
-    margin-top: 12%;
-    margin-left: 38%;
-    background-image: linear-gradient(90deg, rgb(255,255,255) 0%,transparent 66%),repeating-linear-gradient(45deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(90deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),repeating-linear-gradient(135deg, rgba(114, 114, 114,0.08) 0px, rgba(114, 114, 114,0.08) 1px,transparent 1px, transparent 16px),linear-gradient(0deg, rgb(255,255,255),rgb(255,255,255));
-    width: 40%;
-    
 }
-
 
 /* CSS WASSIM */
 

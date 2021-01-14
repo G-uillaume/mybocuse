@@ -16,7 +16,7 @@
                 <div class="col-sm">
                     <h3>
                         <img height="100px"
-                            src="https://avatars3.githubusercontent.com/u/45150822?u=fc54c2bf6aa021c3d61212f54c229dc1596d58cf&v=4"
+                            src="./includes/media/student.svg"
                             alt="pp">
                         &nbsp;
                         <?php echo $_SESSION['first_name'] . " " . $_SESSION['last_name'] ?>
@@ -50,4 +50,3 @@
     </div>
 
 </section>
-
