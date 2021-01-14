@@ -65,6 +65,8 @@ This project taught us many things, but most importantly, it taught us teamwork.
 
 Furthermore, we learned how personalisable and how many possibilities there are with integrating a database into our website. We can create, read, update and delete data from the database directly on PHPMyAdmin, in the PHP website code and also as a user, directly on the website! 
 
+Also, we learned how to carry out a password hash, and why it is so important to do, as an additional security measure!
+
 It should be mentioned that this project also refreshed some concepts we have already learned in HTML, CSS and Javascript, by creating a beautiful and responsive website. 
 
 ## Problems encountered:
