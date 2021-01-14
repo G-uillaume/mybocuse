@@ -209,6 +209,20 @@ header{
     position: absolute;
 }
 
+.tabcheck::-webkit-scrollbar
+{     
+    display: none; 
+}
+
+.tabRecipe::-webkit-scrollbar{
+    display: none;
+}
+
+.hisRecipe::-webkit-scrollbar{
+    display: none;
+}
+
+
 @media screen and (max-width: 1100px) {
 
     .body-content{

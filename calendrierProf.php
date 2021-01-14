@@ -118,7 +118,7 @@ include('includes/connexion.php');
                     </div>
 
 
-                    <div class="col-5" style="overflow-x:auto; max-height: 300px;">
+                    <div class="tabcheck col-5" style="overflow-x:auto; max-height: 70vh;">
                     <?php include("includes/history_attendance_prof.php"); ?>
                             
 

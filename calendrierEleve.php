@@ -13,8 +13,9 @@ include('includes/connexion.php');
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9be8d195b1.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css">
 
     <title>My.Beaucuz</title>
@@ -25,7 +26,7 @@ include('includes/connexion.php');
         <?php include('./includes/smallscreen.php')?>
     </header>
     <!------------------------------- Navigation ------------------------------------------>
-        <main class="body-content">
+    <main class="body-content">
         <nav class="navbar navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand d-flex" href="#">
@@ -39,7 +40,8 @@ include('includes/connexion.php');
                         Profile <i class="fas fa-address-book"></i></button>
 
 
-                    <button type="submit" name="out" value="Deconnexion" class="btn  btn-dark"><a href="./logOut.php">Logout
+                    <button type="submit" name="out" value="Deconnexion" class="btn  btn-dark"><a
+                            href="./logOut.php">Logout
                         </a> <i class="fas fa-sign-out-alt"></i></button>
 
                 </form>
@@ -64,29 +66,32 @@ include('includes/connexion.php');
 
 
 
-    <!------------------------------- Pointage ------------------------------------------>
-    <section class="pointage">
+        <!------------------------------- Pointage ------------------------------------------>
+        <section class="pointage">
             <button id="enter" class="btn btn-dark">9:00<i class="fas fa-sun"></i></button>
             <button id="out" class="btn btn-dark" disabled>17:00<i class="fas fa-moon"></i></button>
-           
-        
+
+
 
 
         </section>
 
         <!------------------------------- Calendrier ------------------------------------------>
 
-    <h2>History of recipes</h2>
-    <?php include('./includes/history_recipes.php') ?>
+        <h2>History of attendances</h2>
+        <?php include('./includes/history.php') ?>
 
-    <h2>History of attendances</h2>
-    <?php include('./includes/history.php') ?>
+        <h2>History of recipes</h2>
+        <?php include('./includes/history_recipes.php') ?>
+
+
 
         <!------------------------------- Button Ajouté ------------------------------------------>
 
 
         <div class="ajouter">
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#recipesModal">Add Recipe <i class="fas fa-plus-circle"></i>
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#recipesModal">Add Recipe
+                <i class="fas fa-plus-circle"></i>
             </button>
         </div>
 

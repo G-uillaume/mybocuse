@@ -37,7 +37,6 @@
                     </dl>
                 </div>
                 <button type="button" class="btn btn-dark" style="width: 250px;" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-dark" style="width: 250px;">Save changes</button>
 
             </div>
 
