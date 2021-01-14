@@ -29,8 +29,8 @@
     <form style="margin:30px 0px 0px 30px;" method="post" action="">
 
         <div class="mb-3">
-            <label  class="form-label">Titre</label>
-            <input type="text" name="title" placeholder="Ex: la tarte au fraise" class="form-control">
+            <label  class="form-label">Title</label>
+            <input type="text" name="title" placeholder="Ex: Strawberry cake" class="form-control">
         </div>
 
         <div class="mb-3">
@@ -44,7 +44,7 @@
         </div>
 
         <form method="post">
-                <input type="submit" name="valider" value="Valider" class="btn btn-dark">
+                <input type="submit" name="valider" value="Submit" class="btn btn-dark">
 
         </form>
     </form>

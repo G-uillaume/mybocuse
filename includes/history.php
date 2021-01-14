@@ -2,10 +2,10 @@
     <table class="table mx-auto">
         <thead>
             <tr>
-                <th scope="col">Nom </th>
+                <th scope="col">Name </th>
                 <th scope="col">Date</th>
-                <th scope="col">Heure d'arrivée</th>
-                <th scope="col">Heure de départ</th>
+                <th scope="col">Arrival Hour</th>
+                <th scope="col">Departure Hour</th>
             </tr>
         </thead>
         <tbody>

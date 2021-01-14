@@ -8,9 +8,11 @@
             <div class="row">
                 <div class="col-sm">
                     <h3>
-                                
-                        <img height="100px" src="./includes/media/student.svg" alt="pp">
-                        
+
+                        <img class="imgProfile" height="100px"
+                            src="./includes/media/student.svg"
+                            alt="pp">
+
                         &nbsp;
                         <?php echo $_SESSION['first_name'] . " " . $_SESSION['last_name'] ?>
                     </h3>
