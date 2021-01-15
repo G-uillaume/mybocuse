@@ -83,7 +83,7 @@ include('includes/connexion.php');
         <div class="container">
             <div class="tableauProf row mt-5">
                 <div class="col-5">
-                    <div style="overflow-x:auto; max-height: 60vh;">
+                    <div class="tabRecipe" style="overflow-x:auto; max-height: 60vh;">
                     <?php
                         include("includes/history_recipes_prof.php");
                     ?>
