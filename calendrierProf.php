@@ -113,19 +113,21 @@ include('includes/connexion.php');
                     <!------------------------------- Button Ajouté ------------------------------------------>
                 </div>
 
-                    <div class="col sm-1">
+                <div class="col sm-1">
 
-                    </div>
+                </div>
 
-
-                    <div class="tabcheck col-5" style="overflow-x:auto; max-height: 70vh;">
+            <div class="col-5">
+                <div class="tabcheck" style="overflow-x:auto; max-height: 60vh;">
                     <?php include("includes/history_attendance_prof.php"); ?>
-                            
+                        
 
-                    <!------------------------------- Button Selected ------------------------------------------>
+                <!------------------------------- Button Selected ------------------------------------------>
 
+                <!------------------------------- Button Selected ------------------------------------------>
+                </div>
                     <div class="dropdown">
-                        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                        <button class="promo btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Promo
                         </button>
@@ -134,12 +136,10 @@ include('includes/connexion.php');
                             <li><a class="dropdown-item" href="calendrierProf.php?promo=lignac">Lignac</a></li>
                             <li><a class="dropdown-item" href="calendrierProf.php?promo=ramsey">Ramsey</a></li>
                         </ul>
-                        
+                    
                     </div>
-                    <!------------------------------- Button Selected ------------------------------------------>
-                </div>
 
-
+            </div>
             </div>
         </div>
     </main>

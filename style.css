@@ -145,6 +145,10 @@ a{
     color:black !important;
 }
 
+.promo {
+    /* position:fixed; */
+}
+
 /*--------------------------( index.php )---------------------------------*/
 .allIndex{
     height: 100vh;

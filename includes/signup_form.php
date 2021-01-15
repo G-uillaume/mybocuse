@@ -16,7 +16,7 @@
             $req->closeCursor();
             ?>
             <h2>Welcome <?php echo $firstName; ?> !</h2>
-            <button type="submit" class="inputIndex btn btn-dark"><a href="./testindex.php">Log in</a></button>
+            <button type="submit" class="inputIndex btn btn-dark"><a href="./index.php">Log in</a></button>
             <?php
         } else {
             ?>
