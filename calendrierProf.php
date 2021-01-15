@@ -133,6 +133,7 @@ include('includes/connexion.php');
                             Promo
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="calendrierProf.php">All</a></li>
                             <li><a class="dropdown-item" href="calendrierProf.php?promo=bocuse">Bocuse</a></li>
                             <li><a class="dropdown-item" href="calendrierProf.php?promo=lignac">Lignac</a></li>
                             <li><a class="dropdown-item" href="calendrierProf.php?promo=ramsey">Ramsey</a></li>

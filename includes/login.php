@@ -12,6 +12,7 @@
                 $_SESSION['first_name'] = $data['first_name'];
                 $_SESSION['last_name'] = $data['last_name'];
                 $_SESSION['email'] = $data['email'];
+                $_SESSION['account_type'] = $data['account_type'];
                 if ($data['account_type'] === "Student") {
                     header("location:calendrierEleve.php");
                 } else {
