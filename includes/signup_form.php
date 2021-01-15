@@ -6,17 +6,18 @@
         $result = $req->fetchColumn();
         $req->closeCursor();
         if (!$result) {
-            $req = $bdd->prepare("INSERT INTO people (first_name, last_name, email, password, account_type) VALUES(?, ?, ?, ?, 'student')");
+            $req = $bdd->prepare("INSERT INTO people (first_name, last_name, email, password, promo, account_type) VALUES(?, ?, ?, ?, ?, 'student')");
             $req->execute([
                 strip_tags(trim($_POST['firstname'])),
                 strip_tags(trim($_POST['lastname'])),
                 filter_var($_POST['newEmail'], FILTER_SANITIZE_EMAIL),
-                password_hash($_POST['newPassword'], PASSWORD_DEFAULT)
+                password_hash($_POST['newPassword'], PASSWORD_DEFAULT),
+                strip_tags(trim($_POST['promo']))
             ]);
             $req->closeCursor();
             ?>
             <h2>Welcome <?php echo $firstName; ?> !</h2>
-            <button type="submit" class="inputIndex btn btn-dark"><a href="./testindex.php">Log in</a></button>
+            <button type="submit" class="inputIndex btn btn-dark"><a href="./index.php">Log in</a></button>
             <?php
         } else {
             ?>
@@ -41,6 +42,15 @@
                 <div class="mb-3">
                     <label class="form-label">Password</label>
                     <input type="password" name="newPassword" placeholder="********" class="form-control" id="exampleInputPassword1">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Promo</label>
+                    <select name="promo" class="form-control" id="exampleInputPassword1">
+                        <option value="bocuse">Bocuse</option>
+                        <option value="lignac">Lignac</option>
+                        <option value="ramsey">Ramsey</option>
+                    </select>
                 </div>
 
                 <input type="submit" value="Sign-up" name="btnSignup" class="btn btn-dark">
@@ -72,6 +82,15 @@
                 <div class="mb-3">
                     <label class="form-label">Password</label>
                     <input type="password" name="newPassword" placeholder="********" class="form-control" id="exampleInputPassword1">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Promo</label>
+                    <select name="promo" class="form-control" id="exampleInputPassword1">
+                        <option value="bocuse">Bocuse</option>
+                        <option value="lignac">Lignac</option>
+                        <option value="ramsey">Ramsey</option>
+                    </select>
                 </div>
 
                 <input type="submit" value="Sign-up" name="btnSignup" class="btn btn-dark">

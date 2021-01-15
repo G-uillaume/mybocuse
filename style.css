@@ -145,6 +145,10 @@ a{
     color:black !important;
 }
 
+.promo {
+    /* position:fixed; */
+}
+
 /*--------------------------( index.php )---------------------------------*/
 .allIndex{
     height: 100vh;
@@ -208,6 +212,20 @@ header{
     display: none;
     position: absolute;
 }
+
+.tabcheck::-webkit-scrollbar
+{     
+    display: none; 
+}
+
+.tabRecipe::-webkit-scrollbar{
+    display: none;
+}
+
+.hisRecipe::-webkit-scrollbar{
+    display: none;
+}
+
 
 @media screen and (max-width: 1100px) {
 

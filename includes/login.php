@@ -3,7 +3,7 @@
     
 
     if (!empty($_POST['email']) && !empty($_POST['password'])) {
-        $req = $bdd->prepare("SELECT ID, first_name, last_name, email, password FROM people WHERE email = ?");
+        $req = $bdd->prepare("SELECT ID, first_name, last_name, email, password, account_type FROM people WHERE email = ?");
         $req->execute([filter_var($_POST['email'], FILTER_SANITIZE_EMAIL)]);
         $data = $req->fetch();
         if (!empty($data)) {
@@ -12,7 +12,12 @@
                 $_SESSION['first_name'] = $data['first_name'];
                 $_SESSION['last_name'] = $data['last_name'];
                 $_SESSION['email'] = $data['email'];
-                header("location:calendrierEleve.php");
+                $_SESSION['account_type'] = $data['account_type'];
+                if ($data['account_type'] === "Student") {
+                    header("location:calendrierEleve.php");
+                } else {
+                    header('Location:calendrierProf.php');
+                }
             }
             else {
                 ?>

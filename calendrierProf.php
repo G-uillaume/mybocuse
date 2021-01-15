@@ -1,3 +1,8 @@
+<?php
+session_start();
+include('includes/connexion.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,57 +83,11 @@
         <div class="container">
             <div class="tableauProf row mt-5">
                 <div class="col-5">
-
-                    <table class="tableRecipe table">
-                        <thead>
-
-                            <tr>
-                                <th></th>
-                                <th>Name</th>
-                                <th>Date</th>
-                                <th>Recipe</th>
-                            </tr>
-
-                            <tr>
-                                <th scope="col">Monday </th>
-                                <td>Mark</td>
-                                <td>14/01/2021</td>
-                                <td>Gateau au Canard</td>
-
-                            </tr>
-                        </thead class="jourSemaine">
-                        <tbody>
-                            <tr>
-                                <th scope="col">Tuesday</th>
-                                <td>Paul Sernine</td>
-                                <td>25/03/2021</td>
-                                <td>Tiramisu</td>
-                            </tr>
-
-                            <tr>
-                                <th scope="col">Wednesday</th>
-                                <td>Nom</td>
-                                <td>Date</td>
-                                <td>Recette</td>
-                            </tr>
-
-                            <tr>
-                                <th scope="col">Thursday</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-
-                            <tr>
-                                <th scope="col">Friday</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
+                    <div class="tabRecipe" style="overflow-x:auto; max-height: 60vh;">
+                    <?php
+                        include("includes/history_recipes_prof.php");
+                    ?>
+                    </div>
                     <!------------------------------- Button Ajouté ------------------------------------------>
 
                     <div class="ajouter">
@@ -159,76 +118,30 @@
 
                 </div>
 
+            <div class="col-5">
+                <div class="tabcheck" style="overflow-x:auto; max-height: 60vh;">
+                    <?php include("includes/history_attendance_prof.php"); ?>
+                        
 
-                <div class="col-5">
+                <!------------------------------- Button Selected ------------------------------------------>
 
-                    <table class="tableCheck table">
-                        <thead>
-
-                            <tr>
-                                <th></th>
-                                <th>Name</th>
-                                <th>Date</th>
-                                <th>Recipe</th>
-                            </tr>
-
-                            <tr>
-                                <th scope="col">Monday </th>
-                                <td>Mark</td>
-                                <td>14/01/2021</td>
-                                <td>Gateau au Canard</td>
-
-                            </tr>
-                        </thead class="jourSemaine">
-                        <tbody>
-                            <tr>
-                                <th scope="col">Tuesday</th>
-                                <td>Nom</td>
-                                <td>Date</td>
-                                <td>Recette</td>
-                            </tr>
-
-                            <tr>
-                                <th scope="col">Wednesday</th>
-                                <td>Nom</td>
-                                <td>Date</td>
-                                <td>Recette</td>
-                            </tr>
-
-                            <tr>
-                                <th scope="col">Thursday</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-
-                            <tr>
-                                <th scope="col">Friday</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-                    <!------------------------------- Button Selected ------------------------------------------>
-
+                <!------------------------------- Button Selected ------------------------------------------>
+                </div>
                     <div class="dropdown">
-                        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                        <button class="promo btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Category
+                            Promo
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="calendrierProf.php">All</a></li>
+                            <li><a class="dropdown-item" href="calendrierProf.php?promo=bocuse">Bocuse</a></li>
+                            <li><a class="dropdown-item" href="calendrierProf.php?promo=lignac">Lignac</a></li>
+                            <li><a class="dropdown-item" href="calendrierProf.php?promo=ramsey">Ramsey</a></li>
                         </ul>
+                    
                     </div>
-                    <!------------------------------- Button Selected ------------------------------------------>
-                </div>
 
-
+            </div>
             </div>
         </div>
     </main>

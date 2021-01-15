@@ -8,11 +8,20 @@
             <div class="row">
                 <div class="col-sm">
                     <h3>
-
-                        <img class="imgProfile" height="100px"
-                            src="./includes/media/student.svg"
-                            alt="pp">
-
+                        <?php if ($_SESSION['account_type']  == 'Chef') {
+                            ?>
+                            <img class="imgProfile" height="100px"
+                                src="../assets/img/yoda.png"
+                                alt="pp">
+                            <?php
+                        } else {
+                            ?>
+                                <img class="imgProfile" height="100px"
+                                src="../assets/img/student.svg"
+                                alt="pp">
+                            <?php
+                        }
+                        ?>
                         &nbsp;
                         <?php echo $_SESSION['first_name'] . " " . $_SESSION['last_name'] ?>
                     </h3>
@@ -37,7 +46,6 @@
                     </dl>
                 </div>
                 <button type="button" class="btn btn-dark" style="width: 250px;" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-dark" style="width: 250px;">Save changes</button>
 
             </div>
 
