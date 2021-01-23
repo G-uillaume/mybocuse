@@ -22,11 +22,12 @@
     if (empty($data)) { // SI $data EST VIDE (L'USER N'A ENCORE JAMAIS POINTE DONC N'APPARAIT PAS DANS LA TABLE)
         if (isset($_POST['enter'])) {
             // ON INSERE UNE NOUVELLE LIGNE A LA TABLE
-            $req = $bdd->prepare("INSERT INTO attendance (fk_id_user, email_user, day, check_in) VALUES(?, ?, ?, NOW())");
+            $req = $bdd->prepare("INSERT INTO attendance (fk_id_user, email_user, day, check_in) VALUES(?, ?, ?, ?)");
             $req->execute([
                 $_SESSION['id'],
                 filter_var($_SESSION['email'], FILTER_SANITIZE_EMAIL),
-                date('Y-m-d')
+                date('Y-m-d'),
+                date('Y-m-d H:i:s')
             ]);
             $req->closeCursor();
             echo date('H:i:s');
@@ -36,8 +37,9 @@
         if ($data['check_out'] === NULL && $data['check_in'] !== NULL) { // SI L'USER A POINTE LE MATIN MAIS PAS LE SOIR
             
             if (isset($_POST['getOut'])) {
-                $req = $bdd->prepare("UPDATE attendance SET check_out = NOW() WHERE fk_id_user = ? AND day = ?");
+                $req = $bdd->prepare("UPDATE attendance SET check_out = ? WHERE fk_id_user = ? AND day = ?");
                 $req->execute([
+                    date('Y-m-d H:i:s'),
                     $_SESSION['id'],
                     date('Y-m-d')
                 ]);
@@ -53,11 +55,12 @@
         } else { // SI L'USER N'A PAS ENCORE POINTE AUJOURD'HUI
             
             if (isset($_POST['enter'])) {
-                $req = $bdd->prepare("INSERT INTO attendance (fk_id_user, email_user, day, check_in) VALUES(?, ?, NOW())");
+                $req = $bdd->prepare("INSERT INTO attendance (fk_id_user, email_user, day, check_in) VALUES(?, ?, ?)");
                 $req->execute([
                     $_SESSION['id'],
                     filter_var($_SESSION['email'], FILTER_SANITIZE_EMAIL),
-                    date('Y-m-d')
+                    date('Y-m-d'),
+                    date('Y-m-d H:i:s')
                 ]);
                 $req->closeCursor();
                 
