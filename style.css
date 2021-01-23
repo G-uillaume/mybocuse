@@ -64,6 +64,10 @@ h2{
     font-family: 'Fraunces', serif;
 }
 
+.h2Prof {
+    padding: 0;
+}
+
 h5{
     color:black !important;
 }
